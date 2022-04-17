@@ -1,0 +1,49 @@
+
+/* section Features */
+
+.features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.features__list {
+    display: flex;
+    text-align: left;
+}
+
+.features__item {
+    flex-basis: 270px;
+}
+
+.features__item:not(:first-child) {
+    margin-left: 30px;
+}
+
+.features__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--bcg-team);
+    border-radius: 4px;
+}
+
+.features__icon {
+    width: 70px;
+    height: 70px;
+}
+
+.features__title {
+    color: var(--color-title-nav);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.features__text {
+    line-height: 1.7;
+}

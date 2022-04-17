@@ -1,0 +1,89 @@
+/* Модальне вікно */
+.beckdrop {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000033;
+    visibility: visible;
+    pointer-events: initial;
+    opacity: 1;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+        0px 1px 3px 0px #0000001f;
+
+    transition-property: transform, opacity;
+    transition-duration: var(--trans-duration);
+    transition-timing-function: var(--trans-timing-func);
+}
+
+.modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    text-align: Center;
+    color: #212121;
+}
+
+.modal__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 6px;
+    border: 1px solid #0000001a;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000000;
+
+    &:hover,
+    &:focus {
+        color: var(--color-nav-active);
+    }
+}
+
+.modal__icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.beckdrop.is-hidden>.modal {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+.beckdrop.is-hidden {
+    visibility: hidden;
+    transition: opacity (0);
+
+    transition-delay: var(--trans-duration);
+    pointer-events: none;
+}
+
+@import "./callback";
+@import "./checkbox";

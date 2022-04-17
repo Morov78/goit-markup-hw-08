@@ -1,0 +1,26 @@
+.middle-wrap {
+    margin-right: 93px;
+}
+
+.middle-wrap__label {
+    padding-top: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.17;
+    color: var(--color-primary-dark);
+}
+
+.footer__social-links {
+    margin-top: 20px;
+    fill: currentColor;
+}
+
+.social-links__link--footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-primary-dark);
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-nav-active);
+    }
+}

@@ -1,0 +1,59 @@
+:root {
+    /* час трансформації */
+    --trans-duration: 250ms;
+    /* функція розподілу часу */
+    --trans-timing-func: cubic-bezier(0.4, 0, 0.2, 1);
+    /* основний шрифт */
+    --primary-font: roboto, sans-serif;
+    /* шрифт для лого */
+    --logo-font: Raleway, sans-serif;
+    /* секція з темним фоном */
+    /* фон */
+    --bgc-dark: #2f303a;
+    --bgc-dark-alpha: #2f303acc;
+
+    /* основний колір тексту */
+    --color-primary-dark: #ffffff;
+    /* колір пошти і номера телефону в футері*/
+    --color-footer-contacts: rgba(255, 255, 255, 0.6);
+
+    /* cекція з світлим фоном */
+    /* основний фон */
+    --bcg-light: #ffffff;
+    /* основний колір тексту */
+    --color-primary-light: #757575;
+
+    /* секція Наша команда, фон */
+    --bcg-team: #f5f4fa;
+
+    /* Лого WebStudio */
+    /* перший колір тексту в логотипі */
+    --color-logo-primary: #2196f3;
+    /* другий колір тексту логотипу в хедері */
+    --color-logo-header-secondary: #000000;
+    /* другий колір тексту логотипу в футері */
+    --color-logo-footer-secondary: #ffffff;
+
+    /* колір тексту навігації і заголовків */
+    --color-title-nav: #212121;
+
+    /* колір активності посилань */
+    --color-nav-active: #2196f3;
+
+    /* фон в секції Hero */
+    --bcg-hero: #c4c4c4;
+
+    /* кнопка Hero */
+    --bcg-button-primary: #2196f3;
+    --color-button: #ffffff;
+    /* фон hover кнопки */
+    --bcg-button-hover: #188ce8;
+
+    /* кнопка портфоліо */
+    --bgc-portfolio-button: #f5f4fa;
+    --color-portfolio-button: #212121;
+    /* кнопка портфоліо в ховері */
+    --bgc-portfolio-button-hover: #2196f3;
+    --color-portfolio-button-hover: #ffffff;
+    --color-clients: #afb1b8;
+}

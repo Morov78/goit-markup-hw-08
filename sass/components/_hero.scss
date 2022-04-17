@@ -1,0 +1,25 @@
+/* hero */
+.hero {
+    background-color: var(--bcg-hero);
+    letter-spacing: 0.06em;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: calc(100% / 2) calc(100% / 2);
+    background-size: 1600px, 1600px;
+
+    &__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.35;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    }
+}
+
+

@@ -1,0 +1,24 @@
+/* Fotter */
+
+.footer {
+    background-color: var(--bgc-dark);
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__container {
+    display: flex;
+}
+
+@import "./footer/left-wrap";
+@import "./footer/middle-wrap";
+@import "./footer/right-wrap";
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+%button {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.85;
+    cursor: pointer;
+    border-width: 0px;
+    border-radius: 4px;
+}
+
+.button {
+    @extend %button;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    padding: 10px 32px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--bcg-button-primary);
+    color: var(--color-button);
+    transition-property: background-color;
+    transition-duration: var(--trans-duration);
+    transition-timing-function: var(--trans-timing-func);
+}
+.button-gallery {
+    @extend %button;
+    padding: 6px 22px;
+    font-weight: 500;
+    background-color: var(--bgc-portfolio-button);
+    color: var(--color-portfolio-button);
+    transition-property: color, background-color, box-shadow;
+    transition-duration: var(--trans-duration);
+    transition-timing-function: var(--trans-timing-func);
+
+    &:hover,
+    &:focus {
+        background-color: var(--bgc-portfolio-button-hover);
+        color: var(--color-portfolio-button-hover);
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+            0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    }
+}

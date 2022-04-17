@@ -1,0 +1,30 @@
+.left-wrap {
+    margin-right: 70px;
+}
+
+.address {
+    font-style: normal;
+    margin-top: 20px;
+    line-height: 1.71;
+    color: var(--color-primary-dark);
+}
+
+.address__list {
+    width: 231px;
+}
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__contacts {
+    color: var(--color-footer-contacts);
+    transition-property: color;
+    transition-duration: var(--trans-duration);
+    transition-timing-function: var(--trans-timing-func);
+
+    &:hover,
+    &:focus {
+        color: var(--color-nav-active);
+    }
+}
