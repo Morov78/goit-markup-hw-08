@@ -5,12 +5,12 @@
 }
 
 .nav {
-    display: flex;
+    // display: flex;
     align-items: center;
 }
 
 .nav__list {
-    display: flex;
+    // display: flex;
     margin-left: 93px;
     font-weight: 500;
     line-height: 1.17;
@@ -55,7 +55,7 @@
 
 /* header-contacts */
 .contacts {
-    display: flex;
+    // display: flex;
     margin-left: auto;
     font-weight: 500;
     line-height: 1.14;
@@ -68,7 +68,7 @@
 }
 
 .contacts__link {
-    display: flex;
+    // display: flex;
     align-items: center;
     color: inherit;
     transition-property: color;
