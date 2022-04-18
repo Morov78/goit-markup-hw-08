@@ -1,9 +1,8 @@
 /* hero */
 .hero {
-   
+    
     background-color: var(--bcg-hero);
-    padding-top: 200px;
-    padding-bottom: 200px;
+    
     
     
    
@@ -22,16 +21,20 @@
     }
 }
 .hero-container {
-    width:100vw;
-    
+    width:100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)),
     url(../images/hero480x400.jpg);
     background-repeat: no-repeat;
     // background-position: calc(100% / 2) calc(100% / 2);
-    
-    background-size: cover;
+    background-position-x: center;
+    background-size: contain;
 }
 
 

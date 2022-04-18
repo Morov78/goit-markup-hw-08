@@ -1,6 +1,6 @@
-.right-wrap {
-    flex-grow: 1;
-}
+// .right-wrap {
+//     flex-grow: 1;
+// }
 
 // .newsletter {
 //     display: flex;
@@ -8,7 +8,7 @@
 // }
 
 .newsletter__label {
-    padding-top: 12px;
+    
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.17;
@@ -16,24 +16,28 @@
 }
 
 .newsletter__label {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
-// .newsletter__wrap {
-//     display: flex;
-//     justify-content: space-between;
-// }
+.newsletter__wrap {
+    margin-top: 20px;
+    // display: flex;
+    // justify-content: space-between;
+}
 
 .newsletter__input {
+    width: 100%;
     padding: 15px;
-    margin-right: 12px;
+    margin-bottom: 20px;
+    
     border: 1px solid;
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px 0px #00000026;
 
     background-color: var(--bgc-dark);
     border-radius: 4px;
-    flex-grow: 1;
+    // flex-grow: 1;
     font-family: inherit;
     font-weight: 400;
     font-size: 16px;
@@ -55,7 +59,7 @@
 
 .newsletter__button {
     padding: 10px 29px;
-    flex-grow: 0;
+    // flex-grow: 0;
     margin-right: 0;
 }
 

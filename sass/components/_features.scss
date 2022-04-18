@@ -7,12 +7,19 @@
 }
 
 .features__list {
-    // display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: left;
 }
 
 .features__item {
+    
     width: 100%;
+    
+    @media screen and (min-width: $break-point1){
+        width: calc($break-point1 - 30px);
+    }
 }
 
 .features__item:not(:last-child) {
@@ -23,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    // width: 100%;
     height: 120px;
     margin-bottom: 30px;
     background-color: var(--bcg-team);
@@ -38,9 +45,9 @@
 .features__title {
     color: var(--color-title-nav);
     font-weight: 700;
-    font-size: 14px;
+    font-size: inherit;
     line-height: 1.14;
-    
+    text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
 }

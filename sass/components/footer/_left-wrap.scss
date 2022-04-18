@@ -1,17 +1,18 @@
-.left-wrap {
-    margin-right: 70px;
-}
+// .left-wrap {
+//     margin-right: 70px;
+// }
 
 .address {
     font-style: normal;
     margin-top: 20px;
+    margin-bottom: 60px;
     line-height: 1.71;
     color: var(--color-primary-dark);
 }
 
-.address__list {
-    width: 231px;
-}
+// .address__list {
+//     width: 231px;
+// }
 
 .address__item:not(:last-child) {
     margin-bottom: 9px;

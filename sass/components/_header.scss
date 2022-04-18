@@ -1,25 +1,26 @@
 /* Header */
 .header {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .nav {
     // display: flex;
+    display: none;
     align-items: center;
 }
 
 .nav__list {
     // display: flex;
-    margin-left: 93px;
+    // margin-left: 93px;
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
 }
 
-.nav__item:not(:first-child) {
-    margin-left: 50px;
-}
+// .nav__item:not(:first-child) {
+//     margin-left: 50px;
+// }
 
 .nav__link {
     color: var(--color-title-nav);
@@ -63,9 +64,9 @@
     list-style: none;
 }
 
-.contacts__item:first-child {
-    margin-right: 50px;
-}
+// .contacts__item:first-child {
+//     margin-right: 50px;
+// }
 
 .contacts__link {
     // display: flex;
