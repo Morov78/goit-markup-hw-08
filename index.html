@@ -23,11 +23,30 @@
   <body>
     <!--заголовок страницы-->
     <header class="header">
-      <div class="container">
+      <div class="container header__container">
         <a class="link logo" href=""
           >Web<span class="header__logo">Studio</span>
         </a>
-        <nav class="nav">
+        <button
+          class="menu-button"
+          type="button"
+          aria-controls="menu-container"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg class="menu-button__icon" aria-label="Перемикач мобільного меню">
+            <use
+              class="icon-menu"
+              href="./images/icons.svg#icon-menu_24px"
+            ></use>
+            <use
+              class="icon-close"
+              href="./images/icons.svg#icon-close_24px"
+            ></use>
+          </svg>
+        </button>
+
+        <nav class="nav" id="menu-container" data-menu>
           <ul class="list nav__list">
             <li class="nav__item">
               <a class="link nav__link nav__link--active" href="">Студия</a>
@@ -575,5 +594,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
