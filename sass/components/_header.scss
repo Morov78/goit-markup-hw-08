@@ -1,7 +1,7 @@
 /* Header */
 .header {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
    
     &__container {
         display: flex;
@@ -9,9 +9,13 @@
         align-items: center;
         position: relative;
         
+        
+        
     }
 }
 .menu-button {
+    position: relative;
+    z-index: 999;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -28,12 +32,13 @@
     transition-duration: var(--trans-duration);
     transition-timing-function: var(--trans-timing-func);
 
-    &:hover, &:focus {
+    &:hover, &:focus-visible {
         color: var(--color-nav-active);
     }
 }
 .menu-button .icon-close {
     display: none;
+
 }
 .menu-button.is-open .icon-close {
     display: block;
@@ -51,21 +56,45 @@
 
 
 .nav {
+    
     position: fixed;
-    top: 48px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
     background-color: var(--bcg-light);
-    // display: flex;
-    display: none;
-    // align-items: center;
-    text-align: center;
-    &.is-open {
-        display: block;
+    
+    
+    display: flex;
+    justify-content: space-between;
+
+    transform: translatey(-100%);
+    
+    pointer-events: none;
+    
+    
+    transition: transform var(--trans-duration) var(--trans-timing-func);
+
+    
+   
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
     }
+    
+    &.is-open {
+        transform: translatey(0);
+        pointer-events: visible;
+        
+        
+    }
+    
+
+    
 }
+
 
 .nav__list {
     // display: flex;
@@ -73,10 +102,18 @@
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
+
+    @media screen and (max-width: 767px) {
+        font-size: 40px;
+    }
 }
 
-// .nav__item:not(:first-child) {
-//     margin-left: 50px;
+.nav__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+// показує активну сторінку
+// .nav__item .nav__link--active {
+//     color: var(--color-nav-active);
 // }
 
 .nav__link {
@@ -91,35 +128,56 @@
     }
 }
 
-.nav__link--active {
-    position: relative;
+// .nav__link--active {
+//     position: relative;
 
-    &::after {
-        content: "";
-        position: absolute;
+//     &::after {
+//         content: "";
+//         position: absolute;
     
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: var(--color-nav-active);
-        bottom: -34px;
-        left: 0;
-        pointer-events: none;
-        transition-property: background-color;
-        transition-duration: var(--trans-duration);
-        transition-timing-function: var(--trans-timing-func);
-    }
-}
+//         width: 100%;
+//         height: 4px;
+//         border-radius: 2px;
+//         background-color: var(--color-nav-active);
+//         bottom: -34px;
+//         left: 0;
+//         pointer-events: none;
+//         transition-property: background-color;
+//         transition-duration: var(--trans-duration);
+//         transition-timing-function: var(--trans-timing-func);
+//     }
+// }
 
 /* header-contacts */
 .contacts {
-    // display: flex;
-    margin-left: auto;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 64px;
+    // margin-left: auto;
     font-weight: 500;
-    line-height: 1.14;
+    line-height: 1.17;
+    
     letter-spacing: 0.02em;
     list-style: none;
+
+    @media screen and (max-width:767px) {
+        flex-direction: column-reverse;
+        &__item:first-child {
+            font-size: 24px;
+        }
+        &__item:last-child {
+            font-size: 34px;
+            color: var(--color-nav-active);
+            margin-bottom: 32px;
+
+            @media screen and (max-width: 350px) {
+                font-size: calc(100vw / 20 + 15px);
+            }
+        }
+        
+    }
 }
+
 
 // .contacts__item:first-child {
 //     margin-right: 50px;
@@ -144,6 +202,9 @@
 .contacts__icon {
     fill: currentColor;
     margin-right: 10px;
+    @media screen and (max-width:767px) {
+        display: none;
+    }
 }
 
 .contacts__icon--post {
@@ -154,4 +215,28 @@
 .contacts__icon--phone {
     width: 10px;
     height: 16px;
+}
+
+.header-socials {
+    display: flex;
+    
+
+    &__item:not(:last-child) {
+        margin-right: 20px;
+
+        @media screen and (max-width: 420px) {
+            margin-right: calc(100vw / 8 - 33px);
+        }
+    }
+
+    &__link {
+        color: var(--color-nav-active);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+
+        @media screen and (max-width: 420px) {
+            font-size: calc(100vw / 33 + 5px);
+        }
+    }
 }

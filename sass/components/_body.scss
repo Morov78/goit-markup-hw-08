@@ -58,20 +58,38 @@ body {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.03em;
-    // min-width: 320px;
-    @media screen and (max-width: 319px) {
-        overflow: scroll;
-        background-color: gold;
-    }
+    
+     &.is-open {
+    
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+      
+    
 }
 
 .container {
-    min-width: $minwidth;
-    max-width: $break-point1;
+    
+    
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    
    
+    @media screen and (max-width: 319px) {
+        width: 320px;
+        height:100%;
+        overflow: auto;
+        
+    }
+
+    @media screen and (min-width: 320px) {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
 }
