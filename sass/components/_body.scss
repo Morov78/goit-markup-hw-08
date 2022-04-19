@@ -59,11 +59,13 @@ body {
     font-weight: 400;
     letter-spacing: 0.03em;
     
+    
      &.is-open {
     
             width: 100vw;
             height: 100vh;
             overflow: hidden;
+            
         }
       
     
@@ -91,5 +93,8 @@ body {
     }
     @media screen and (min-width: 768px) {
         max-width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
     }
 }
