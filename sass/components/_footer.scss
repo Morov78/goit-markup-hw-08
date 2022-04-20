@@ -7,10 +7,28 @@
     padding-bottom: 60px;
 }
 
-// .footer__container {
-//     // display: flex;
-//     width: 100vw;
-// }
+.footer__container {
+    @media screen and (min-width:1200px) {
+        display: flex;
+        width: 100vw;
+        justify-content: space-between;
+        text-align: left;
+    }
+    
+}
+.footer__inner {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
+}
 
 @import "./footer/left-wrap";
 @import "./footer/middle-wrap";

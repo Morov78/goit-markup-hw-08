@@ -1,18 +1,23 @@
-// .left-wrap {
-//     margin-right: 70px;
-// }
+.left-wrap {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 50%;     
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+    }
+}
 
 .address {
     font-style: normal;
     margin-top: 20px;
-    margin-bottom: 60px;
+    
     line-height: 1.71;
     color: var(--color-primary-dark);
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
 }
-
-// .address__list {
-//     width: 231px;
-// }
 
 .address__item:not(:last-child) {
     margin-bottom: 9px;

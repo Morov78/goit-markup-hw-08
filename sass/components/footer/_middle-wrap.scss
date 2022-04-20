@@ -1,9 +1,14 @@
-// .middle-wrap {
-//     margin-right: 93px;
-// }
+.middle-wrap {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 50%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 15px;
+    }
+}
 
 .middle-wrap__label {
-   
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.17;
@@ -12,8 +17,11 @@
 
 .footer__social-links {
     margin-top: 20px;
-    margin-bottom: 60px;
     fill: currentColor;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
 }
 
 .social-links__link--footer {
