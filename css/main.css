@@ -102,6 +102,19 @@ p {
   color: var(--color-title-nav);
 }
 
+@media screen and (max-width: 360px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
 /* основні властивості body */
 body {
   background-color: var(--bcg-light);
