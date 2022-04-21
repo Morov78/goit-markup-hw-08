@@ -25,6 +25,11 @@ p {
     display: block;
 }
 
+.picture {
+    line-height: 0;
+    
+}
+
 /* робить елемент невидимим */
 .visually-hidden {
     position: absolute;
@@ -81,7 +86,7 @@ body {
 .container {
     
     
-    width: 100%;
+    // width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     

@@ -109,7 +109,7 @@
       </section> -->
 
       <!--Наши преимущества features__-->
-      <!-- <section class="features">
+      <section class="features">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="list features__list">
@@ -163,59 +163,85 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!--Чем занимаемся Services-->
-      <!-- <section class="services">
+      <section class="services">
         <div class="container">
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="list services__list">
             <li class="services__item">
               <div class="services__wrap">
-                <img
-                  class="image"
-                  src="./images/photobox1.jpg"
-                  alt="верстальщик пишет код"
-                  width="370"
-                  height="294"
-                />
+                <picture class="picture">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/services/services1-lap.jpg    1x,
+                      ./images/services/services1-lap@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img class="image"
+                    src="./images/services/services1-lap.jpg"
+                    alt="верстальщик пишет код"
+                  />
+                </picture>
+
                 <p class="services__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="services__item">
               <div class="services__wrap">
-                <img
-                  class="image"
-                  src="./images/photobox2.jpg"
-                  alt="человек держит в левой руке смартфон, рядом стоит ноутбук, на котором изображено 3 смартфона"
-                  width="370"
-                  height="294"
-                />
+                <picture class="picture">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/services/services2-lap.jpg    1x,
+                      ./images/services/services2-lap@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img class="image"
+                    src="./images/services/services2-lap.jpg"
+                    alt="человек держит в левой руке смартфон, рядом стоит ноутбук, на котором изображено 3 смартфона"
+                  />
+                </picture">
                 <p class="services__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="services__item">
               <div class="services__wrap">
-                <img
-                  class="image"
-                  src="./images/photobox3.jpg"
-                  alt="в левой руке планшет с изображением 6-гранника, в правой руке stylus-ручка"
-                  width="370"
-                  height="294"
-                />
+                <picture class="picture">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/services/services3-lap.jpg    1x,
+                      ./images/services/services3-lap@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img class="image"
+                    src="./images/services/services3-lap.jpg"
+                    alt="в левой руке планшет с изображением 6-гранника, в правой руке stylus-ручка"
+                  />
+                </picture>
+
                 <p class="services__text">Дизайнерские решения</p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Наша команда Team-->
       <section class="team">
         <div class="container">
           <h2 class="title">Наша команда</h2>
           <ul class="list team__list">
             <li class="team__item">
-              <picture>
+              <picture class="picture">
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -232,21 +258,21 @@
                   "
                   type="image/jpg"
                 />
-                <source
+                <source class="size"
                   media="(max-width: 767px)"
                   srcset="
                     ./images/team/team-card1-mob.jpg    1x,
                     ./images/team/team-card1-mob@2x.jpg 2x
                   "
+                  sizes="(max-width: 767px) 90vw"
+            
                   type="image/jpg"
                 />
 
                 <img
-                  class="image team__image"
+                  class="image"
                   src="./images/team/team-card1-mob.jpg"
                   alt="Игорь Демьяненко"
-                  width="450"
-                  height="460"
                 />
               </picture>
 
@@ -285,7 +311,7 @@
               </ul>
             </li>
             <li class="team__item">
-              <picture>
+              <picture class="picture">
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -312,11 +338,9 @@
                 />
 
                 <img
-                  class="image team__image"
+                  class="image"
                   src="./images/team/team-card2-mob.jpg"
                   alt="Ольга Репина"
-                  width="450"
-                  height="460"
                 />
               </picture>
 
@@ -354,7 +378,7 @@
               </ul>
             </li>
             <li class="team__item">
-              <picture>
+              <picture class="picture">
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -381,11 +405,9 @@
                 />
 
                 <img
-                  class="image team__image"
+                  class="image"
                   src="./images/team/team-card3-mob.jpg"
                   alt="Николай Тарасов"
-                  width="450"
-                  height="460"
                 />
               </picture>
 
@@ -423,7 +445,7 @@
               </ul>
             </li>
             <li class="team__item">
-              <picture>
+              <picture class="picture">
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -450,11 +472,9 @@
                 />
 
                 <img
-                  class="image team__image"
+                  class="image"
                   src="./images/team/team-card4-mob.jpg"
                   alt="Михаил Ермаков"
-                  width="450"
-                  height="460"
                 />
               </picture>
 
