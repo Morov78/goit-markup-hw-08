@@ -21,9 +21,11 @@
     }
 }
 .hero-container {
-    width:100%;
+    
+    width: 100vw;
     height: 400px;
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,7 +36,11 @@
     background-repeat: no-repeat;
     // background-position: calc(100% / 2) calc(100% / 2);
     background-position-x: center;
-    background-size: contain;
+    background-size: cover;
+
+    @media screen and (max-width: 320px) {
+        width: 320px;
+    }
 }
 
 
