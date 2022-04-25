@@ -1,17 +1,32 @@
 /* portfolio */
 .page-gallery {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 /* кнопки галереї*/
 .buttons {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin:0px -4px;
+
+    @media screen and(max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: left;
+        margin:-8px -4px;
+    }
 }
 
-.buttons__item:nth-child(n + 2) {
-    margin-left: 8px;
+.buttons__item{
+    margin: 0px 4px;
+    @media screen and(max-width: 767px) {
+        margin: 8px 4px;
+    }
+
 }
 
 

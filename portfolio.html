@@ -20,14 +20,33 @@
     <!-- підключення файлу стилів -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  <body body-menu>
     <!--заголовок страницы-->
     <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a class="link logo" href=""
-            >Web<span class="header__logo">Studio</span>
-          </a>
+      <div class="container header__container">
+        <a class="link logo" href=""
+          >Web<span class="header__logo">Studio</span>
+        </a>
+        <button
+          class="menu-button"
+          type="button"
+          aria-controls="menu-container"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg class="menu-button__icon" aria-label="Перемикач мобільного меню">
+            <use
+              class="icon-menu"
+              href="./images/icons.svg#icon-menu_24px"
+            ></use>
+            <use
+              class="icon-close"
+              href="./images/icons.svg#icon-close_24px"
+            ></use>
+          </svg>
+        </button>
+
+        <nav class="nav" id="menu-container" data-menu>
           <ul class="list nav__list">
             <li class="nav__item">
               <a class="link nav__link" href="./index.html">Студия</a>
@@ -58,6 +77,20 @@
               </a>
             </li>
           </ul>
+          <ul class="list header-socials">
+            <li class="header-socials__item">
+              <a class="link header-socials__link" href="">Instagram</a>
+            </li>
+            <li class="header-socials__item">
+              <a class="link header-socials__link" href="">Twitter</a>
+            </li>
+            <li class="header-socials__item">
+              <a class="link header-socials__link" href="">Facebook</a>
+            </li>
+            <li class="header-socials__item">
+              <a class="link header-socials__link" href="">LinkedIn</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -86,16 +119,43 @@
           </ul>
 
           <ul class="list gallery">
+            <!-- картка галереї 1 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card1.jpg"
-                    alt="Веб-сайт Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery1/gallery1-lap.jpg    1x,
+                        ./images/gallery/gallery1/gallery1-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery1/gallery1-tab.jpg    1x,
+                        ./images/gallery/gallery1/gallery1-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery1/gallery1-mob.jpg    1x,
+                        ./images/gallery/gallery1/gallery1-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery1/gallery1-mob.jpg"
+                      alt="Веб-сайт Технокряк"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -108,16 +168,43 @@
                 </div>
               </a>
             </li>
+            <!-- картка галереї 2 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery2/gallery2-lap.jpg    1x,
+                        ./images/gallery/gallery2/gallery2-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery2/gallery2-tab.jpg    1x,
+                        ./images/gallery/gallery2/gallery2-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery2/gallery2-mob.jpg    1x,
+                        ./images/gallery/gallery2/gallery2-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery2/gallery2-mob.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -132,16 +219,43 @@
                 </div>
               </a>
             </li>
+            <!-- картка галереї 3 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card3.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery3/gallery3-lap.jpg    1x,
+                        ./images/gallery/gallery3/gallery3-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery3/gallery3-tab.jpg    1x,
+                        ./images/gallery/gallery3/gallery3-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery3/gallery3-mob.jpg    1x,
+                        ./images/gallery/gallery3/gallery3-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery3/gallery3-mob.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -154,16 +268,43 @@
                 </div>
               </a>
             </li>
+            <!-- картка галереї 4 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card4.jpg"
-                    alt="Проект Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery4/gallery4-lap.jpg    1x,
+                        ./images/gallery/gallery4/gallery4-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery4/gallery4-tab.jpg    1x,
+                        ./images/gallery/gallery4/gallery4-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery4/gallery4-mob.jpg    1x,
+                        ./images/gallery/gallery4/gallery4-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery4/gallery4-mob.jpg"
+                      alt="Проект Prime"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -176,16 +317,43 @@
                 </div>
               </a>
             </li>
+            <!-- картка галереї 5 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card5.jpg"
-                    alt="Проект Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery5/gallery5-lap.jpg    1x,
+                        ./images/gallery/gallery5/gallery5-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery5/gallery5-tab.jpg    1x,
+                        ./images/gallery/gallery5/gallery5-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery5/gallery5-mob.jpg    1x,
+                        ./images/gallery/gallery5/gallery5-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery5/gallery5-mob.jpg"
+                      alt="Проект Boxes"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -198,16 +366,43 @@
                 </div>
               </a>
             </li>
+            <!-- картка галереї 6 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card6.jpg"
-                    alt="Веб-сайт Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery6/gallery6-lap.jpg    1x,
+                        ./images/gallery/gallery6/gallery6-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery6/gallery6-tab.jpg    1x,
+                        ./images/gallery/gallery6/gallery6-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery6/gallery6-mob.jpg    1x,
+                        ./images/gallery/gallery6/gallery6-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery6/gallery6-mob.jpg"
+                      alt="Веб-сайт Inspiration has no Borders"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -220,16 +415,43 @@
                 </div>
               </a>
             </li>
+            <!-- картка галереї 7 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card7.jpg"
-                    alt="Издание Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery7/gallery7-lap.jpg    1x,
+                        ./images/gallery/gallery7/gallery7-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery7/gallery7-tab.jpg    1x,
+                        ./images/gallery/gallery7/gallery7-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery7/gallery7-mob.jpg    1x,
+                        ./images/gallery/gallery7/gallery7-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery7/gallery7-mob.jpg"
+                      alt="Издание Limited Edition"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -242,16 +464,43 @@
                 </div>
               </a>
             </li>
+            <!-- картка галереї 8 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card8.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery8/gallery8-lap.jpg    1x,
+                        ./images/gallery/gallery8/gallery8-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery8/gallery8-tab.jpg    1x,
+                        ./images/gallery/gallery8/gallery8-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery8/gallery8-mob.jpg    1x,
+                        ./images/gallery/gallery8/gallery8-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery8/gallery8-mob.jpg"
+                      alt="Проект LAB"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -264,16 +513,43 @@
                 </div>
               </a>
             </li>
+            <!-- картка галереї 9 -->
             <li class="gallery__item">
               <a class="link gallery__link" href="">
                 <div class="gallery__wrap">
-                  <img
-                    class="image"
-                    src="./images/card9.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="picture">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/gallery/gallery9/gallery9-lap.jpg    1x,
+                        ./images/gallery/gallery9/gallery9-lap@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/gallery/gallery9/gallery9-tab.jpg    1x,
+                        ./images/gallery/gallery9/gallery9-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/gallery/gallery9/gallery9-mob.jpg    1x,
+                        ./images/gallery/gallery9/gallery9-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/gallery/gallery9/gallery9-mob.jpg"
+                      alt="Growing Business"
+                    />
+                  </picture>
+
                   <p class="card-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -293,72 +569,77 @@
     <!--подвал страницы-->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="left-wrap">
-          <a class="link logo" href="">
-            Web<span class="footer__logo">Studio</span>
-          </a>
+        <div class="footer__inner">
+          <div class="left-wrap">
+            <a class="link logo" href="">
+              Web<span class="footer__logo">Studio</span>
+            </a>
 
-          <address class="address">
-            <ul class="list address__list">
-              <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="address__item">
+            <address class="address">
+              <ul class="list address__list">
+                <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="address__item">
+                  <a
+                    class="link address__contacts"
+                    href="mailto:info@example.com"
+                  >
+                    info@example.com
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a class="link address__contacts" href="tel:+380991111111"
+                    >+38 099 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="middle-wrap">
+            <p class="middle-wrap__label">присоединяйтесь</p>
+            <ul class="list social-links footer__social-links">
+              <li class="social-links__item">
                 <a
-                  class="link address__contacts"
-                  href="mailto:info@example.com"
+                  class="link social-links__link social-links__link--footer"
+                  href=""
                 >
-                  info@example.com
+                  <svg class="social-links__icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address__item">
-                <a class="link address__contacts" href="tel:+380991111111"
-                  >+38 099 111 11 11
+              <li class="social-links__item">
+                <a
+                  class="link social-links__link social-links__link--footer"
+                  href=""
+                >
+                  <svg class="social-links__icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  class="social-links__link social-links__link--footer"
+                  href=""
+                >
+                  <svg class="social-links__icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  class="link social-links__link social-links__link--footer"
+                  href=""
+                >
+                  <svg class="social-links__icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="middle-wrap">
-          <p class="middle-wrap__label">присоединяйтесь</p>
-          <ul class="list social-links footer__social-links">
-            <li class="social-links__item">
-              <a
-                class="link social-links__link social-links__link--footer"
-                href=""
-              >
-                <svg class="social-links__icon">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a
-                class="link social-links__link social-links__link--footer"
-                href=""
-              >
-                <svg class="social-links__icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a class="social-links__link social-links__link--footer" href="">
-                <svg class="social-links__icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a
-                class="link social-links__link social-links__link--footer"
-                href=""
-              >
-                <svg class="social-links__icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="right-wrap">
@@ -385,5 +666,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
